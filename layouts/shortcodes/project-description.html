@@ -1,0 +1,25 @@
+{{$itItems := split (.Get "skills") ","}}
+
+<div>
+  <span>{{ .Get "name" }}</span>
+  <ul>
+    <li>
+      <b>Timeframes:</b> {{ .Get "timeframes" }}
+    </li>
+    <li>
+      <b>Skills:</b> {{ delimit $itItems ", " }}
+    </li>
+    <li>
+      <b>Description:</b> {{ .Get "description" }}
+    </li>
+    <li>
+      <b>Responsibilities:</b> {{ .Get "responsibilities" }}
+    </li>
+    <li>
+      <b>Personal achievements:</b> {{ .Get "achivements" }}
+    </li>
+    <li>
+      <b>Technologies:</b> {{ .Get "technologies" }}
+    </li>
+  </ul>
+</div>

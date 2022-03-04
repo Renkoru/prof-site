@@ -1,0 +1,12 @@
+<!-- Modified form 'coder' theme -->
+<span class="post-tax">
+  <i>tags: &nbsp;</i>
+  {{- range $index, $el := . -}}
+    {{- if gt $index 0 }}
+      <span class="tax-delimiter">,</span>
+    {{- end }}
+      <a href="{{ ( printf "tags/%s/" ( . | urlize ) ) | relLangURL }}">
+        {{ . }}
+      </a>
+  {{- end -}}
+</span>

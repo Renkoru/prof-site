@@ -1,0 +1,348 @@
++++
+draft = false
+date = 2019-01-10T19:55:38+06:00
+title = "Interview Python"
+slug = ""
+tags = []
+categories = []
++++
+<article>
+  <section>
+    <h2>Принципы</h2>
+
+    <ul>
+      <li>
+        <b>Пытаться ставить вопросы в виде постановки проблемы.</b>
+        <p>"Есть такая задача, что бы вы использовали, чтобы с ней справиться?"</p>
+      </li>
+      <li>
+        Если несолько интервьюированных, то выбирать блоки рандомно и разные,
+        но чтобы людей в итоге оценить полно и можно было их сравнить.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Basics</h2>
+    <ol>
+      <li>Tell me about Python. Do you like it? What pars you do not like?</li>
+      <li>Do you know about 'The Zen of Python'? Do you like it? (import this)</li>
+      <li>
+        Ex.:
+        I have only 512 MB of RAM on my machine.
+        I have a function that requests and prints paginated list of all PRs (unlimited)
+        of my Github project. Why 512 MB will be fine to handle that case?
+        <br/>
+        (What is garbage collector? Why do we need it? Does Python has it?)
+      </li>
+      <li>
+        Ex.:
+        I have 4 repos in GH.
+        I need to filter all PRs where I am approver. How I could improve processing time?
+        <br/>
+        Can we write multithreaded (processed) applications in Python?
+        How to do it, with help of what tools? Have you wrote such application?
+      </li>
+      <li>
+        Ex.:
+        You have 10 functions that handles 10 endpoints requests. (Request is an argument)
+        You have to check that each of this handlers check the specific query params.
+        And convert params to needed types. And if some params are required - return 403 error response.
+
+        How would you implement this behaviour?
+        <br/>
+        
+      </li>
+      <li>How to get rid off duplicates in a list</li>
+      <li>
+        Closure in Python. How does they work?
+
+        (Make a GH Gist and share the link (screen)?)
+        <code>
+            count = 100
+            def closure():
+                count = 0
+
+                def inner():
+                    nonlocal count
+                    count += 1
+                    print(count)
+
+                return inner
+
+            start = closure()
+            start()
+            start()
+            start()
+        </code>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>General questions</h2>
+    <ul>
+      <li>
+        <p>
+          What are Python decorators? Do you have any examples in the mind?
+          Have you write your own? How many ways you know to implement decorator?
+          What is Paramerized decorator?
+        </p>
+        <p>
+          Ex.: @ordered - decorator that orders function results in ASC way.
+          What if we need to pass direction argument to it (DESC/ASC)?
+        </p>
+        <p>
+          Other simple ex: Logging(print), Evaluate execution time, Notify about exceptions,
+          Cache logic (default lru cache decorator), Validation
+        </p>
+      </li>
+      <li>
+        Awareness of basic packages in Python:
+        abc, argparse, re, uuid, logging, itertools, functools, random, os, csv
+      </li>
+      <li>
+        Context Managers. How they are used? Have you write your own?
+      </li>
+      <li>
+        <p>
+          Iterators and Generators in Python. Why do you need them? Have you wrote your own?
+        </p>
+        <p>
+          An iterator is an object that contains a countable number of values.
+          Iterator - __iter__() (initialize and return self)  and __next__() (next item or Exception)
+        </p>
+        <p>
+          Generator in python is a subclass of Iterator.
+          Generators are about 'yield' keyword. Allows you to implement iterations simplier.
+          Generator to optimize memory. Could be defined in inline expression or function. (generator comprehension)
+          Python generator saves the states of the local variables every time ‘yield’ pauses the loop in python.
+
+          All the local variables before the yield statements are stored.
+        </p>
+      </li>
+      <li>How you debug your code? If it is in a docker container?</li>
+      <li>Typing. What do you think about it?</li>
+      <li>Data classes</li>
+      <li>What other imrovements of Python 3 do you know?</li>
+      <li>What can you say about using concurrency in Python? (Multiple processes / threads)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What python versions have you used? (Python 2 vs Python 3)</h2>
+    <ul>
+      <li>When support of Python 2 will end?</li>
+      <li>
+        Do you have an experience of migration from 2 to 3 Python.
+        What tools have you used? What plan?
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Code style, checks</h2>
+    <ul>
+      <li>
+        <b>What is pep 8?</b>
+        It is a set of rules that specify how to format Python code for maximum readability.
+      </li>
+      <li>Linters: pylint, pycodestyle, flake8, pyflake</li>
+      <li>Autoformatters: black, autopep8, yapf, isort</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Test Runners</h2>
+    <ul>
+      <li>
+        <div>What testing frameworks do you know? (Pytest, nose and nose2, unittest)</div>
+        <div>Pytest: fixtures, parametrization, configuration (conftest.py)</div>
+      </li>
+      <li>Mock</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Python frameworks</h2>
+    <ul>
+      <li>Django / Django Rest Framework</li>
+      <li>Flask</li>
+      <li>Django vs Flask</li>
+      <li>FastAPI</li>
+      <li>Sync or Async? What async frameworks do you know? (Twisted, Torrnado, asyncio)</li>
+      <li>What Python web-servers do you know? (Gunicorn, uwsgi, apache)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Django</h2>
+
+    <div>What basic concepts do you know?</div>
+
+    <p>
+      <h3>Basic</h3>
+      <ul>
+        <li>Django patterns. MVC, what is what in Django. Models, Views, Templates</li>
+        <li>How do we setup DB configuration in Django?</li>
+        <li></li>
+      </ul>
+    </p>
+
+    <p>
+      <h3>Models</h3>
+      <ul>
+        <li>ORM. SQLAlchemy / RAW SQL / other packages</li>
+        <li>Abstract/Proxy models</li>
+        <li>
+          If model has changed, for example new field is added.
+          How to sync this changes with DB?<br/>
+          (Migrations).
+        </li>
+        <li>What type of *migrations* do you know?</li>
+        <li>What do you know about *signals*?</li>
+        <li>Can you work with transactions in Django?</li>
+        <li>Do you have experience in optimising ORM queries?</li>
+      </ul>
+    </p>
+
+    <p>
+      <h3>Views</h3>
+      <ul>
+        <li>What is a 'view' in Django?</li>
+        <li>What types do you know? (functional vs Class-based views)</li>
+        <li>What class-based views do you know? (TemplateView, ListView, DetailView, FormView)</li>
+        <li>What do you know about Django *Middlewares*? Have you wrote your own? Vs Node middelwares?</li>
+        <li>Does Django have caching instruments?</li>
+      </ul>
+    </p>
+
+    <p>
+      <h3>Templates</h3>
+      <ul>
+        <li>What is a tempate? What a template engine Django uses?</li>
+        <li>How to pass data to the template?</li>
+        <li>Context processors?</li>
+        <li>How to use shared code in templates, like navbar, footer, header?</li>
+        <li>Forms</li>
+      </ul>
+    </p>
+
+    <p>
+      <h3>Other questions</h3>
+      <ul>
+        <li>
+          Ex.: <br>
+          You have a UI with list of employees, names, avatars. Employees have vacation records.
+          We need to add a 'days left' badge. How would you implement this feature?
+        </li>
+        <li>Django admin</li>
+        <li>Django patterns</li>
+        <li>Upgrade Django to new versions</li>
+        <li>How do we setup DB configuration in Django?</li>
+      </ul>
+    </p>
+  </section>
+
+  <section>
+    <h2>Django Rest Framework</h2>
+    <ul>
+      <li>What entities does it have?</li>
+      <li>Viewsets</li>
+      <li>Routers</li>
+      <li>Serializers</li>
+      <li>Validators</li>
+      <li>Filtration</li>
+      <li>Pagination</li>
+      <li>Permissions</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Flask (Comparing to Django)</h2>
+    <div>What basic concepts do you know?</div>
+
+    <ul>
+      <li>Routing</li>
+      <li>How to get access to 'request' object. In Django it passes as an argument</li>
+      <li>Rendering template? Does it have Class-based generic views?</li>
+      <li>Serilization library for models</li>
+      <li>Does Flask has some sort of middlewares?</li>
+      <li>What is 'Blueprint' in Flask?</li>
+      <li>Does Flask has signals?</li>
+      <li>ORM for Flask?</li>
+      <li>Template engine for Flask?</li>
+      <li>Admin views?</li>
+      <li>Caching?</li>
+      <li>Packages to implement REST API?</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Famous Python packages</h2>
+    <ul>
+      <li>Requests</li>
+      <li>Celery</li>
+      <li>Scrapy</li>
+      <li>SQLAlchemy</li>
+      <li>click</li>
+      <li>Pendulum - datetime manipulation</li>
+      <li>nltk - Natural Language Toolkit</li>
+      <li>NumPy</li>
+      <li>Pandas</li>
+      <li>Pydentic</li>
+      <li>? Atros</li>
+      <li>? Loguru</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Python packages (dependency) managment</h2>
+    <ul>
+      <li>pip</li>
+      <li>virtualenv</li>
+      <li>pyenv</li>
+      <li>pip-tools</li>
+      <li>Pipenv</li>
+      <li>Poetry</li>
+      <li>Conda</li>
+      <li>Have you implement your own package and release it on PYPI?</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Coding (Share screen or https://www.codingrooms.com/compiler/python3/)</h2>
+    <ul>
+      <li>
+        <b>Task: validation of paired parentheses</b>
+        <div>Examples:</div>
+        <ul>
+          <li>(())</li>
+          <li>((()) - invalid</li>
+          <li>()()()</li>
+          <li>))(( - invalid</li>
+        </ul>
+        <div>Hidden test cases:</div>
+        <ul>
+          <li>)()</li>
+          <li>())</li>
+        </ul>
+      </li>
+    </ul>
+
+    <p>Notes:</p>
+    <ul>
+      <li>Good if person starts from writing tests</li>
+      <li>Ask to implement 'timeit' decorator</li>
+      <li>Ask to implement 'ctimeit' context</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Links</h2>
+    <ul>
+      <li>https://djangobook.com/mdj2-django-structure/</li>
+    </ul>
+  </section>
+
+</article>

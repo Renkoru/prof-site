@@ -1,0 +1,15 @@
+.post-tax {
+  display: flex !important;
+  margin-left: 235px;
+  color: gray;
+}
+
+.post-tax .tax-delimiter {
+  margin-right: 7px !important;
+  width: 7px;
+}
+
+.post-tax a {
+  font-size: 14px !important;
+  color: gray !important;
+}

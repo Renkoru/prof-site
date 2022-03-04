@@ -1,0 +1,49 @@
+baseURL = "https://mrurenko.netlify.app/"
+languageCode = "en-us"
+title = "Maxim Rurenko"
+theme = "hugo-coder"
+
+[params]
+    author = "Maxim Rurenko"
+    info = "Software Developer and Magician"
+    description = "Maxim Rurenko's personal website"
+    keywords = "blog,developer,personal"
+    avatarurl = "images/avatar.jpg"
+
+    favicon_32 = "/img/favicon-32x32.png"
+    favicon_16 = "/img/favicon-16x16.png"
+
+    footercontent = ""
+
+    hidecredits = false
+    hidecopyright = false
+
+    rtl = false
+
+    math = true
+    custom_css = ["css/custom.css"]
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+# Social links
+[[params.social]]
+    name = "Github"
+    icon = "fab fa-github fa-2x"
+    weight = 1
+    url = "https://github.com/renkoru/"
+
+# Menu links
+[[menu.main]]
+    name = "About"
+    weight = 3
+    url = "/about/"
+[[menu.main]]
+    name = "Blog"
+    weight = 1
+    url  = "/posts/"
+[[menu.main]]
+    name = "Articles"
+    weight = 2
+    url  = "/articles/"

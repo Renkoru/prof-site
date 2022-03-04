@@ -1,0 +1,20 @@
+* About
+Made with [[https://gohugo.io/][Hugo]]
+* Development
+Run local dev server.
+#+BEGIN_SRC sh
+  hugo server -D
+#+END_SRC
+* Usage
+#+BEGIN_SRC sh
+  hugo new articles/NEW.html
+#+END_SRC
+
+#+BEGIN_SRC sh
+  hugo new posts/films/NEW.html --kind film
+#+END_SRC
+* Links to look at:
+- https://github.dev/
+* Local setup
+1. Setup Hugo
+2. Setup Hugo-coder `git submodule update --init --recursive`
