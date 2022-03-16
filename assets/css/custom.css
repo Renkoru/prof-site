@@ -13,3 +13,9 @@
   font-size: 14px !important;
   color: gray !important;
 }
+
+@media print {
+  .noPrint {
+    display: none;
+  }
+}
