@@ -1,13 +1,13 @@
-baseURL = "https://mrurenko.netlify.app/"
+baseURL = "https://pro-mrurenko.netlify.app/"
 languageCode = "en-us"
 title = "Maxim Rurenko"
 theme = "hugo-coder"
 
 [params]
     author = "Maxim Rurenko"
-    info = "Software Developer and Magician"
+    info = "Software Developer"
     description = "Maxim Rurenko's personal website"
-    keywords = "blog,developer,personal"
+    keywords = "blog,developer"
     avatarurl = "images/avatar.jpg"
 
     favicon_32 = "/img/favicon-32x32.png"
