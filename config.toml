@@ -49,3 +49,8 @@ theme = "hugo-mr-pro"
     name = "Articles"
     weight = 2
     url  = "/articles/"
+
+# (not working) Module way to use theme
+# [module]
+# [[module.imports]]
+#   path = 'github.com/renkoru/hugo-mr-pro'
