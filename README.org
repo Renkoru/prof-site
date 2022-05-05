@@ -15,9 +15,14 @@ Run local dev server.
 #+END_SRC
 * Links to look at:
 - https://github.dev/
+- https://nicolasgallagher.com/about-html-semantics-front-end-architecture/
+- https://blog.bitsrc.io/building-design-systems-how-to-treat-css-styles-31d200233e1
+- https://bradfrost.com/blog/post/css-architecture-for-design-systems/
+- https://www.deptagency.com/en-us/insight/how-to-create-a-design-system-from-scratch/
 * Local setup
 1. Setup Hugo
 2. Setup Hugo-coder `git submodule update --init --recursive`
+   https://git-scm.com/book/en/v2/Git-Tools-Submodules
 * Important
 ** Customized partials of Hugo coder theme:
 - layouts/_default/baseof.html - added 'customPrintCSS' handler

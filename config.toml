@@ -1,7 +1,8 @@
 baseURL = "https://pro-mrurenko.netlify.app/"
 languageCode = "en-us"
 title = "Maxim Rurenko"
-theme = "hugo-coder"
+# theme = "hugo-coder"
+theme = "hugo-mr-pro"
 
 [params]
     author = "Maxim Rurenko"
