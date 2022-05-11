@@ -8,40 +8,42 @@ categories = []
 +++
 <article>
   <section>
-    <h2>Принципы</h2>
+    <h2>Principles</h2>
 
     <ul>
       <li>
-        <b>Пытаться ставить вопросы в виде постановки проблемы.</b>
-        <p>"Есть такая задача, что бы вы использовали, чтобы с ней справиться?"</p>
+        <b>Try to ask questions in a form of a challenge.</b>
+        <p>"Here is a business need ... how you would handle this need?"</p>
       </li>
       <li>
-        Если несолько интервьюированных, то выбирать блоки рандомно и разные,
-        но чтобы людей в итоге оценить полно и можно было их сравнить.
+        If there is a several people to interveiew - select question blocks random
+        and different way. But stil you need to cover all type of questions and be able
+        to compare them
       </li>
     </ul>
-
   </section>
 
   <section>
-    <h2>Начало</h2>
+    <h2>Begining</h2>
 
     <p>
-      Представиться
+      Introduce myself
     </p>
 
     <p>
-      If you don't mind, let's start our conversation in English. That way we could clarify you English level
-      at the begining.
+      If you don't mind, let's start our conversation in English.
+      That way we could clarify you English level at the begining.
     </p>
   </section>
 
   <section>
-    <h2>"О себе"</h2>
+    <h2>"About me"</h2>
     <ul>
       <li>
-        Could you tell me about there project you contrebuted the most? What were your resposibilities in the project?
-        What about the most interesting prject you have been working on? What role did you have on it?
+        Could you tell me about there project you contrebuted the most?
+        What were your resposibilities in the project?
+        What about the most interesting prject you have been working on?
+        What role did you have on it?
       </li>
       <li>
         In what project roles do you have an experience? (DevLead, TechLead, QA, Manager)
@@ -52,22 +54,23 @@ categories = []
   <section>
     <h2>Before start</h2>
     <p>
-      Так как время у нас ограниченно, а вопросов которые хочется обсудить довольно много -
-      иногда мне придётся вас перебивать и останавливать, я надеюсь на ваше понимание.
+      Because we have limited time and a lot of topics to discuss, it could happend
+      that I will interrupt and stop you. I hope you understand.
     </p>
   </section>
 
   <section>
     <h2>Web</h2>
     <p>
-      Начинали ли вы когда-нибудь Web проект с нуля? (Комерческий)
+      Have you ever started Web project from scratch? (Commercial)
     </p>
 
     <article>
       
     </article>
     <p>
-      Из каких частей состоит Web приложение? Можно воображаемо спроектировать приложение, от простого к сложному.
+      What parts of Web application you can differentiate?
+      (We can talk about imaginary application, and go from simple to complex)
     </p>
     <ul>
       <li>Client (HTML templates, jQuery, SPA / Angular / React )</li>
@@ -76,15 +79,16 @@ categories = []
       <li>Backend Framework (Django, FastAPI, ExpressJs)</li>
       <li>
         Communication protocol. REST / GraphQL / XML / RPC / ...
-        Что вам ближе, наравится больше, для каких задач больше подходит?
+        What do you like more, for what kind of purpose what protocols are appropriate?
+        What Pros/Cons do you see?
       </li>
       <li>Cache (Redis / Memcache)</li>
       <li>Database (MySQL, Postgres, MongoDB) (ORM ?, SQLAlchemy, DjangoORM)</li>
       <li>
-        Logs (Куда писать, Что нужно логировать? Как потом это использовать)
+        Logs (What to log, where to log? How you would work with them later?)
         Metrics, Alerts (ELK/EFK)
       </li>
-      <li>Search in a lot of data (Объявления, Интернет магазин). Elasticsearch</li>
+      <li>Search in a lot of data (Advertisement site, Internet shop). Elasticsearch</li>
       <li>Tests</li>
       <li>Distributed Task Queue (Celery)</li>
       <li>MQ / AMQP (RabbitMQ, Kafka, ZeroMQ, Redis, NATS)</li>
@@ -92,7 +96,7 @@ categories = []
       <li>Docs / Confluence</li>
       <li>ETL (Extract-Transform-Load)</li>
     </ul>
-    <p> Над какими из них вам приходилось работать. Что интереснее всего? </p>
+    <p>With which of them you have worked with? Which of them are the most interesting? </p>
 
     <h3>HTTP</h3>
     <ul>
@@ -113,16 +117,22 @@ categories = []
         </div>
         <div>
           <b>Uniform interface</b>
-          (Identification of resources, Manipulation of resources through representations, Self-descriptive messages, Hypermedia as the engine of application state),
-          <b>Client-server</b>, <b>Stateless</b>, <b>Cacheable</b>, <b>Layered system</b>, <b>Code on demand (optional)</b>
+          (Identification of resources, Manipulation of resources through representations,
+          Self-descriptive messages, Hypermedia as the engine of application state),
+          <b>Client-server</b>, <b>Stateless</b>, <b>Cacheable</b>, <b>Layered system</b>,
+          <b>Code on demand (optional)</b>
         </div>
 
-        <div>Resource concept (Uniform Resource Identifiers / URIs) and resource representation: data, metadata, hypermedia links. Naming</div>
+        <div>
+          Resource concept (Uniform Resource Identifiers / URIs)
+          and resource representation: data, metadata, hypermedia links. Naming
+        </div>
         <div>Resource Methods and your typical implementation of them</div>
         <div>
           <h4>Best Practices</h4>
           <div>
-            Use nouns to represent resources (resource archetypes : document, collection, store, and controller) /
+            Use nouns to represent resources (resource archetypes :
+            document, collection, store, and controller) /
           </div>
           <ul>
             <li>Best Practices</li>
@@ -167,13 +177,13 @@ categories = []
   </section>
 
   <section>
-    <h2>Patterns ??? and principles</h2>
+    <h2>Principles and patterns</h2>
     <p>
-      Какими основными принципами пользуетесь при проектировании кода, архитектуры?
+      What programming principles do you use to design your code, architecture?
     </p>
 
     <p>
-      <ul>
+      {{<boxed-list>}}
         <li>ETC. Easy to Change</li>
         <li>DRY</li>
         <li>KISS</li>
@@ -183,11 +193,11 @@ categories = []
         <li>MVVC</li>
         <li>
           High Cohesion and Loose Coupling <br/>
-          Высокая сплоченность, единение  Слабая связность
+          (Высокая сплоченность, единение  Слабая связность)
         </li>
         <li>YAGNI</li>
         <li>SOLID. What means 'S' for you?</li>
-      </ul>
+      {{</boxed-list>}}
     </p>
   </section>
 
@@ -213,13 +223,14 @@ categories = []
       <li>What types of databases do you know? (SQL/NoSQL/Key-Value)</li>
       <li>
         How good do you know SQL?
-        SQL вопросы на HAVING, индексы, types of indexes?
+        SQL questions with HAVING, indexes, types of indexes?
       </li>
       <li>What is ORM? Vs raw SQL?</li>
       <li>
         When do we need to use JOIN/Indexes?
-        Есть таблица с авторами и таблица с книгами. Как получить данные, чтобы потом показать
-        список из таких элеметов как: Имя автора и годы жизни со всем книгами, которые он написал.
+        There is a table with authors and the one with books. How would you create a SQL query
+        to show a list of such elements as next: Author name and his life dates with all books
+        he has written.
       </li>
       <li>What is 'primary key' / 'foreign key'?</li>
       <li>Why do we need transactions?</li>
@@ -231,9 +242,7 @@ categories = []
 
   <section>
     <h2>Environments and deployment (DevOps)</h2>
-    <ul>
-      <li>Рабочие окружения. Dev, Staging, UAT? SSH</li>
-      <li>How you setup your local env?</li>
+    {{<boxed-list>}}
       <li>Docker / Kubernatis</li>
       <li>Docker-Compose</li>
       <li>Jenkins, CI, CD, артефакты.</li>
@@ -241,13 +250,17 @@ categories = []
       <li>Static serving</li>
       <li>Monitoring. (Prometheus)</li>
       <li>Metrics. Graphana / ELK (ElasticSearch)</li>
-      <li>Что должно обязательно быть в проекте, прежде чем переходить настройке СI/CD ?</li>
+    {{</boxed-list>}}
+    <ul>
+      <li>Рабочие окружения. Dev, Staging, UAT? SSH</li>
+      <li>How you setup your local env?</li>
+      <li>What parts of the project are required to implement CI/CD process?</li>
     </ul>
   </section>
 
   <section>
     <h2>AWS</h2>
-    <ul>
+    {{<boxed-list>}}
       <li>Lambda</li>
       <li>Kinesis</li>
       <li>DynamoDB</li>
@@ -258,13 +271,13 @@ categories = []
       <li>SNS</li>
       <li>SAM (AWS)</li>
       <li>Other?</li>
-    </ul>
+    {{</boxed-list>}}
   </section>
 
   <section>
     <h2>HTML, CSS</h2>
     <ul>
-      <li>Sematic markup</li>
+      <li>Semantic markup</li>
       <li>Float, Flex, Grid, something else?</li>
       <li>
         What can you say about 'display', 'poistion' properties? How do you use them?
@@ -278,7 +291,10 @@ categories = []
       </li>
       <li>ADA (Americans with Disabilities Act)</li>
       <li>JS Frameworks/libraries to write UI: React, Angular, Vue, ... jQuery?</li>
-      <li>What is the best way to connect CSS / JS external files? (Where you should place them in html file)</li>
+      <li>
+        What is the best way to connect CSS / JS external files?
+        (Where you should place them in html file)
+      </li>
       <li>What do you know about versions of HTML standard?</li>
     </ul>
   </section>
@@ -290,7 +306,7 @@ categories = []
       <li>Sprints</li>
       <li>
         Sprint planning. Estimations
-        Оценка (задач, отдельных частей функционала, проекта, подготовка коммерческого предложения)
+        (Tasks, project parts, whole project, preparing commercial proposal )
       </li>
       <li>Agile</li>
       <li>Kanban</li>
