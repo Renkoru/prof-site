@@ -2,12 +2,13 @@
 draft = false
 date = 2019-01-10T19:55:38+06:00
 updatedat = 2022-05-07T00:00:00+06:00
-title = "Interview Python"
-slug = ""
+title = "Вопросы Python собеседования"
 tags = []
 categories = []
 +++
 <article>
+  {{<interview-person>}}
+
   <section>
     <h2>Principles</h2>
 
@@ -30,44 +31,16 @@ categories = []
       <li>In what kinds of projects Python is appropriate and where it is not?</li>
       <li>What is PEPs?</li>
       <li>Do you know about 'The Zen of Python'? Do you like it? (import this)</li>
-      <li>What is garbage collector (GC)? Why do we need it? Does Python has it?</li>
-      <li>
-        What kinds of container variables Python has? (list, tuple, set, dict, dataclass)
-      </li>
-      <li>
-        Closure in Python. How does they work?
-        <span class="noPrint">(TODO: Extract as example, add study links)</span>
-
-        (Make a GH Gist and share the link (screen)?)
-
-        {{<collapsable>}}
-            <pre>
-            <code class="noPrint">
-            count = 100
-            def closure():
-                count = 0
-
-                    def inner():
-                        nonlocal count
-                        count += 1
-                        print(count)
-
-                    return inner
-
-                start = closure()
-                start()  # ? Output-1
-                start()  # ? Output-2
-                start()  # ? Output-3
-            </code>
-            </pre>
-        {{</collapsable>}}
-      </li>
     </ol>
   </section>
 
   <section>
     <h2>General questions</h2>
-    <ul>
+    {{<q-list>}}
+      <li>What is garbage collector (GC)? Why do we need it? Does Python has it?</li>
+      <li>
+        What kinds of container variables Python has? (list, tuple, set, dict, dataclass)
+      </li>
       <li>
         <p>
           What are Python decorators? Do you have any examples in the mind?
@@ -109,13 +82,41 @@ categories = []
         </p>
         {{</collapsable>}}
       </li>
+      <li>
+        Closure in Python. How does they work?
+        <span class="noPrint">(TODO: Extract as example, add study links)</span>
+
+        (Make a GH Gist and share the link (screen)?)
+
+        {{<collapsable>}}
+            <pre>
+            <code class="noPrint">
+            count = 100
+            def closure():
+                count = 0
+
+                    def inner():
+                        nonlocal count
+                        count += 1
+                        print(count)
+
+                    return inner
+
+                start = closure()
+                start()  # ? Output-1
+                start()  # ? Output-2
+                start()  # ? Output-3
+            </code>
+            </pre>
+        {{</collapsable>}}
+      </li>
       <li>How you debug your code? If it is in a docker container?</li>
       <li>Typing. What do you think about it?</li>
       <li>What other imrovements of Python 3 do you know?</li>
       <li>Dataclasses / Metaclasses / magic methods (duck typing)</li>
-      <li>What can you say about using concurrency in Python? (Multiple processes / threads)</li>
+      <li>What can you say about using concurrency in Python? (Multiple processes / threads / GIL)</li>
       <li>Asynchronous I/O - asyncio</li>
-    </ul>
+    {{</q-list>}}
   </section>
 
   <section>
@@ -179,7 +180,7 @@ categories = []
 
     <div>
       <h3>Models</h3>
-      <ul>
+      {{<q-list>}}
         <li>ORM. SQLAlchemy / RAW SQL / other packages</li>
         <li>Abstract/Proxy models</li>
         <li>
@@ -190,34 +191,34 @@ categories = []
         <li>What do you know about *signals*?</li>
         <li>Can you work with transactions in Django?</li>
         <li>Do you have experience in optimising ORM queries?</li>
-      </ul>
+      {{</q-list>}}
     </div>
 
     <div>
       <h3>Views</h3>
-      <ul>
+      {{<q-list>}}
         <li>What is a 'view' in Django?</li>
         <li>What types do you know? (functional vs Class-based views)</li>
         <li>What class-based views do you know? (TemplateView, ListView, DetailView, FormView)</li>
         <li>What do you know about Django *Middlewares*? Have you wrote your own? Vs Node middelwares?</li>
         <li>Does Django have caching instruments?</li>
-      </ul>
+      {{</q-list>}}
     </div>
 
     <div>
       <h3>Templates</h3>
-      <ul>
+      {{<q-list>}}
         <li>What is a tempate? What a template engine Django uses?</li>
         <li>How to pass data to the template?</li>
         <li>Context processors?</li>
         <li>How to use shared code in templates, like navbar, footer, header?</li>
         <li>Forms</li>
-      </ul>
+      {{</q-list>}}
     </div>
 
     <div>
       <h3>Other questions</h3>
-      <ul>
+      {{<q-list>}}
         <li>
           Ex.: <br>
           You have a UI with list of employees, names, avatars. Employees have vacation records.
@@ -227,7 +228,7 @@ categories = []
         <li>Django patterns</li>
         <li>Upgrade Django to new versions</li>
         <li>How do we setup DB configuration in Django?</li>
-      </ul>
+      {{</q-list>}}
     </div>
   </section>
 
@@ -249,7 +250,7 @@ categories = []
     <h2>Flask (Comparing to Django)</h2>
     <div>What basic concepts do you know?</div>
 
-    <ul>
+    {{<q-list>}}
       <li>Routing</li>
       <li>How to get access to 'request' object. In Django it passes as an argument</li>
       <li>Rendering template? Does it have Class-based generic views?</li>
@@ -262,7 +263,7 @@ categories = []
       <li>Admin views?</li>
       <li>Caching?</li>
       <li>Packages to implement REST API?</li>
-    </ul>
+    {{</q-list>}}
   </section>
 
   <section>

@@ -1,4 +1,8 @@
 @media print {
+  html {
+    font-size: 12px;
+  }
+
   .noPrint {
     display: none;
   }

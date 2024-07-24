@@ -3,7 +3,7 @@
 {{ end }}
 {{ define "main" }}
   <section class="container list">
-    <h1 class="title">{{ .Title }}</h1>
+    <h1 class="title">{{ T "articles" | title }}</h1>
 
     <ul>
       {{- range .Pages -}}

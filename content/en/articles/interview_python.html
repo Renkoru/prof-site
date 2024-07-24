@@ -1,0 +1,332 @@
++++
+draft = false
+date = 2019-01-10T19:55:38+06:00
+updatedat = 2022-05-07T00:00:00+06:00
+title = "Interview Python"
+slug = ""
+tags = []
+categories = []
++++
+<article>
+  {{<interview-person>}}
+
+  <section>
+    <h2>Principles</h2>
+
+    <ul>
+      <li>
+        <b>Try to ask questions in a form of a challenge.</b>
+        <p>"Here is a business need ... how you would handle this need?"</p>
+      </li>
+      <li>
+        If there is a several people to interveiew - select question blocks random
+        and different way. But stil you need to cover all type of questions and be able
+        to compare them
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Basics</h2>
+    <ol>
+      <li>In what kinds of projects Python is appropriate and where it is not?</li>
+      <li>What is PEPs?</li>
+      <li>Do you know about 'The Zen of Python'? Do you like it? (import this)</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>General questions</h2>
+    {{<q-list>}}
+      <li>What is garbage collector (GC)? Why do we need it? Does Python has it?</li>
+      <li>
+        What kinds of container variables Python has? (list, tuple, set, dict, dataclass)
+      </li>
+      <li>
+        <p>
+          What are Python decorators? Do you have any examples in the mind?
+          Have you write your own? How many ways you know to implement decorator?
+          What is Paramerized decorator?
+        </p>
+        <p>
+          Ex.: @ordered - decorator that orders function results in ASC way.
+          What if we need to pass direction argument to it (DESC/ASC)?
+        </p>
+        <p>
+          Other simple ex: Logging(print), Evaluate execution time, Notify about exceptions,
+          Cache logic (default lru cache decorator), Validation
+        </p>
+      </li>
+      <li>
+        Awareness of basic packages in Python:
+        abc, argparse, re, uuid, logging, itertools, functools, random, os, csv
+      </li>
+      <li>
+        Context Managers. How they are used? Have you write your own?
+      </li>
+      <li>
+        <p>
+          Iterators and Generators in Python. Why do you need them? Have you wrote your own?
+        </p>
+        {{<collapsable>}}
+        <p>
+          An iterator is an object that contains a countable number of values.
+          Iterator - __iter__() (initialize and return self)  and __next__() (next item or Exception)
+        </p>
+        <p>
+          Generator in python is a subclass of Iterator.
+          Generators are about 'yield' keyword. Allows you to implement iterations simplier.
+          Generator to optimize memory. Could be defined in inline expression or function. (generator comprehension)
+          Python generator saves the states of the local variables every time ‘yield’ pauses the loop in python.
+
+          All the local variables before the yield statements are stored.
+        </p>
+        {{</collapsable>}}
+      </li>
+      <li>
+        Closure in Python. How does they work?
+        <span class="noPrint">(TODO: Extract as example, add study links)</span>
+
+        (Make a GH Gist and share the link (screen)?)
+
+        {{<collapsable>}}
+            <pre>
+            <code class="noPrint">
+            count = 100
+            def closure():
+                count = 0
+
+                    def inner():
+                        nonlocal count
+                        count += 1
+                        print(count)
+
+                    return inner
+
+                start = closure()
+                start()  # ? Output-1
+                start()  # ? Output-2
+                start()  # ? Output-3
+            </code>
+            </pre>
+        {{</collapsable>}}
+      </li>
+      <li>How you debug your code? If it is in a docker container?</li>
+      <li>Typing. What do you think about it?</li>
+      <li>What other imrovements of Python 3 do you know?</li>
+      <li>Dataclasses / Metaclasses / magic methods (duck typing)</li>
+      <li>What can you say about using concurrency in Python? (Multiple processes / threads / GIL)</li>
+      <li>Asynchronous I/O - asyncio</li>
+    {{</q-list>}}
+  </section>
+
+  <section>
+    <h2>Code style, checks</h2>
+    <ul>
+      <li>
+        <b>What is pep 8?</b>
+        {{<collapsable>}}
+        It is a set of rules that specify how to format Python code for maximum readability.
+        {{</collapsable>}}
+      </li>
+      <li>Linters: pylint, pycodestyle, flake8, pyflake</li>
+      <li>Autoformatters: black, autopep8, yapf, isort</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Test Runners</h2>
+    <ul>
+      <li>What testing frameworks do you know? (unittest, Pytest)</li>
+      <li>Pytest: fixtures, parametrization, configuration (conftest.py)</li>
+      <li>Mocking</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Python frameworks</h2>
+    {{<boxed-list>}}
+      <li>Django</li>
+      <li>Web2Py</li>
+      <li>Django Rest Framework</li>
+      <li>Pyramid</li>
+      <li>Flask</li>
+      <li>Falcon</li>
+      <li>FastAPI</li>
+      <li>Aiohttp</li>
+      <li>Tornado</li>
+    {{</boxed-list>}}
+
+    <ul>
+      <li>
+        What framework to use in each business case?
+        (Newspapper site, Microservice, Game)
+      </li>
+      <li>What Python web-servers do you know? (Gunicorn, uwsgi, apache)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Django</h2>
+
+    <div>What basic concepts do you know?</div>
+
+    <div>
+      <h3>Basic</h3>
+      <ul>
+        <li>Django patterns. MVC, what is what in Django. Models, Views, Templates</li>
+        <li>How do we setup DB configuration in Django?</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Models</h3>
+      {{<q-list>}}
+        <li>ORM. SQLAlchemy / RAW SQL / other packages</li>
+        <li>Abstract/Proxy models</li>
+        <li>
+          If model has changed, for example new field is added.
+          How to sync this changes with DB? (Migrations).
+        </li>
+        <li>What type of *migrations* do you know?</li>
+        <li>What do you know about *signals*?</li>
+        <li>Can you work with transactions in Django?</li>
+        <li>Do you have experience in optimising ORM queries?</li>
+      {{</q-list>}}
+    </div>
+
+    <div>
+      <h3>Views</h3>
+      {{<q-list>}}
+        <li>What is a 'view' in Django?</li>
+        <li>What types do you know? (functional vs Class-based views)</li>
+        <li>What class-based views do you know? (TemplateView, ListView, DetailView, FormView)</li>
+        <li>What do you know about Django *Middlewares*? Have you wrote your own? Vs Node middelwares?</li>
+        <li>Does Django have caching instruments?</li>
+      {{</q-list>}}
+    </div>
+
+    <div>
+      <h3>Templates</h3>
+      {{<q-list>}}
+        <li>What is a tempate? What a template engine Django uses?</li>
+        <li>How to pass data to the template?</li>
+        <li>Context processors?</li>
+        <li>How to use shared code in templates, like navbar, footer, header?</li>
+        <li>Forms</li>
+      {{</q-list>}}
+    </div>
+
+    <div>
+      <h3>Other questions</h3>
+      {{<q-list>}}
+        <li>
+          Ex.: <br>
+          You have a UI with list of employees, names, avatars. Employees have vacation records.
+          We need to add a 'days left' badge. How would you implement this feature?
+        </li>
+        <li>Django admin</li>
+        <li>Django patterns</li>
+        <li>Upgrade Django to new versions</li>
+        <li>How do we setup DB configuration in Django?</li>
+      {{</q-list>}}
+    </div>
+  </section>
+
+  <section>
+    <h2>Django Rest Framework</h2>
+    <p>What entities does it have?</p>
+    {{<boxed-list>}}
+      <li>Viewsets</li>
+      <li>Routers</li>
+      <li>Serializers</li>
+      <li>Validators</li>
+      <li>Filtration</li>
+      <li>Pagination</li>
+      <li>Permissions</li>
+    {{</boxed-list>}}
+  </section>
+
+  <section>
+    <h2>Flask (Comparing to Django)</h2>
+    <div>What basic concepts do you know?</div>
+
+    {{<q-list>}}
+      <li>Routing</li>
+      <li>How to get access to 'request' object. In Django it passes as an argument</li>
+      <li>Rendering template? Does it have Class-based generic views?</li>
+      <li>Serilization library for models</li>
+      <li>Does Flask has some sort of middlewares?</li>
+      <li>What is 'Blueprint' in Flask?</li>
+      <li>Does Flask has signals?</li>
+      <li>ORM for Flask?</li>
+      <li>Template engine for Flask?</li>
+      <li>Admin views?</li>
+      <li>Caching?</li>
+      <li>Packages to implement REST API?</li>
+    {{</q-list>}}
+  </section>
+
+  <section>
+    <h2>Famous Python packages</h2>
+    {{<boxed-list>}}
+      <li>Requests</li>
+      <li>Celery</li>
+      <li>Scrapy / Beautiful Soup </li>
+      <li>SQLAlchemy / Alembic</li>
+      <li>click / typer</li>
+      <li>Arrow / Pendulum - datetime manipulation</li>
+      <li>nltk - Natural Language Toolkit</li>
+      <li>NumPy / Pandas/ Jupiter / Pytorch</li>
+      <li>Pydentic</li>
+      <li>? Atros</li>
+      <li>? Loguru</li>
+    {{</boxed-list>}}
+  </section>
+
+  <section>
+    <h2>Python packages (dependency) managment</h2>
+    {{<boxed-list>}}
+      <li>pip</li>
+      <li>virtualenv</li>
+      <li>pyenv</li>
+      <li>pip-tools</li>
+      <li>Pipenv</li>
+      <li>Poetry</li>
+      <li>Conda</li>
+    {{</boxed-list>}}
+    <p>Have you implement your own package and release it on PYPI?</p>
+  </section>
+
+  <section>
+    <h2>
+      Coding (Share screen or
+      <a target="_blank" href="https://www.codingrooms.com/compiler/python3/">Codingrooms</a>
+      )
+    </h2>
+    <ul>
+      <li>
+        <a
+            target="_blank"
+            href="https://github.com/Renkoru/train/blob/master/katas.org#paired-parentheses"
+        >
+          Paired parentheses
+        </a>
+        <ul>
+          <li>Good if person starts from writing tests</li>
+          <li>Ask to implement <b>timeit</b>/<b>counter</b> decorator</li>
+          <li>Ask to implement <b>ctimeit</b> context</li>
+        </ul>
+      </li>
+    </ul>
+
+  </section>
+
+  <section>
+    <h2>Links</h2>
+    <ul>
+      <li>https://djangobook.com/mdj2-django-structure/</li>
+    </ul>
+  </section>
+
+</article>

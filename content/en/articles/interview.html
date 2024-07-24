@@ -7,6 +7,8 @@ tags = []
 categories = []
 +++
 <article>
+  {{<interview-person>}}
+
   <section>
     <h2>Principles</h2>
 
@@ -72,7 +74,7 @@ categories = []
       What parts of Web application you can differentiate?
       (We can talk about imaginary application, and go from simple to complex)
     </p>
-    <ul>
+    {{<q-list>}}
       <li>Client (HTML templates, jQuery, SPA / Angular / React )</li>
       <li>Web server (Nginx / Apache / LiteSpeed Web Server / Lighttpd / Caddy)</li>
       <li>WSGI server (uWSGI / GUnicorn)</li>
@@ -95,11 +97,12 @@ categories = []
       <li>API docs / Swagger / OpenAPI</li>
       <li>Docs / Confluence</li>
       <li>ETL (Extract-Transform-Load)</li>
-    </ul>
+    {{</q-list>}}
+
     <p>With which of them you have worked with? Which of them are the most interesting? </p>
 
     <h3>HTTP</h3>
-    <ul>
+    {{<q-list>}}
       <li>What happends when we put some URL in browser and press 'Enter'.</li>
       <li>What can you say about OSI model | TCP/IP model</li>
       <li>
@@ -147,10 +150,10 @@ categories = []
       </li>
       <li>SOAP</li>
       <li>Have you used GraphQL? Have you implement GraphQL?</li>
-      <li>CORS Headers (Cross-Origin Resource Sharing)</li>
+      <li>CORS Headers (Cross-Origin Resource Sharing. Same-origin policy: scheme/host/port)</li>
       <li>TLS (Transport Layer Security), SSL (Secure Socket Layer)</li>
       <li>Web sockets</li>
-    </ul>
+    {{</q-list>}}
 
     <h3>Cookies</h3>
     <ul>
@@ -160,13 +163,13 @@ categories = []
     </ul>
 
     <h3>Sessions</h3>
-    <ul>
+    {{<q-list>}}
       <li>What is it? How do we use them?</li>
       <li>Where does they stored?</li>
       <li>How much time does they live?</li>
       <li>JWT token</li>
       <li>Протухает сессия в одной вкладке, логинимся в одной, как сделать, чтобы в других тоже залогинился.</li>
-    </ul>
+    {{</q-list>}}
 
     <h3>Cache</h3>
     <ul>
@@ -203,7 +206,7 @@ categories = []
 
   <section>
     <h2>Git</h2>
-    <ul>
+    {{<q-list>}}
       <li>
         Why do we need it? How do you use Git? Tell me about agreements you have used.
         (Git flow, branches)
@@ -214,12 +217,12 @@ categories = []
       <li>Have you ever done Force push?</li>
       <li>Have you used 'rebase'(interactive) in git?</li>
       <li>Have you had an experience with SVN / Mercurial?</li>
-    </ul>
+    {{</q-list>}}
   </section>
 
   <section>
     <h2>Databases</h2>
-    <ul>
+    {{<q-list>}}
       <li>What types of databases do you know? (SQL/NoSQL/Key-Value)</li>
       <li>
         How good do you know SQL?
@@ -237,7 +240,7 @@ categories = []
       <li>Have you ever migrated your DB schema/table?</li>
       <li>With what DBs have you worked? (PostgreSQL, MySQL, MariaDB, MongoDB, Redis, Memcache)</li>
       <li>How to check DB performance? ('Explain' functionality?)</li>
-    </ul>
+    {{</q-list>}}
   </section>
 
   <section>
@@ -276,7 +279,7 @@ categories = []
 
   <section>
     <h2>HTML, CSS</h2>
-    <ul>
+    {{<q-list>}}
       <li>Semantic markup</li>
       <li>Float, Flex, Grid, something else?</li>
       <li>
@@ -296,12 +299,12 @@ categories = []
         (Where you should place them in html file)
       </li>
       <li>What do you know about versions of HTML standard?</li>
-    </ul>
+    {{</q-list>}}
   </section>
 
   <section>
     <h2>Development processes</h2>
-    <ul>
+    {{<q-list>}}
       <li>Code Review</li>
       <li>Sprints</li>
       <li>
@@ -312,7 +315,7 @@ categories = []
       <li>Kanban</li>
       <li>Tools: Jira, Redmine, Trello, Kaiten?</li>
       <li>Release checklist</li>
-    </ul>
+    {{</q-list>}}
   </section>
 
   <section>
@@ -346,7 +349,7 @@ categories = []
 
   <section>
     <h2>Soft skills / Personality Traits</h2>
-    <ul>
+    {{<q-list>}}
       <li>English level (If not discussed at the begining)</li>
       <li>Что нового для себя изучил в последнее время? Как подходил к изучению?</li>
       <li>Do you have an pet-projects?</li>
@@ -379,7 +382,7 @@ categories = []
         Трудолюбие (работает усердно, с полной отдачей): увлеченность,
         концентрация внимания, производительность
       </li>
-    </ul>
+    {{</q-list>}}
   </section>
 
   <section>
