@@ -71,6 +71,10 @@ defaultContentLanguageInSubdir = false
         name = 'Обо мне'
         pageRef = '/about'
         weight = 2
+      [[languages.ru.menus.main]]
+        name = 'Резюме'
+        pageRef = '/cv'
+        weight = 3
   [languages.en]
     contentDir = 'content/en'
     disabled = true

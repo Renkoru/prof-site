@@ -1,0 +1,267 @@
+---
+draft: false
+---
+
+
+<div class="cv-page">
+  <section class="cv-left">
+    <div>
+      <img class="cv-avatar" alt="" src="/{{<avatar>}}">
+    </div>
+    <br />
+    <div class="cv-icons">
+      <a target="_blank" href="mailto:mrurenko@gmail.com"><img alt="" src="/icons/email.svg"></a>
+      <a target="_blank" href="http://t.me/Renkoru"><img alt="" src="/icons/tg.svg"></a>
+      <a target="_blank" href="https://pro-mrurenko.netlify.app/"><img alt="" src="/icons/website.svg"></a>
+      <a target="_blank" href="https://www.linkedin.com/in/maxim-rurenko-033a13a1/"><img alt="" src="/icons/linkedin.svg"></a>
+      <a target="_blank" href="https://github.com/Renkoru"><img alt="" src="/icons/github.svg"></a>
+    </div>
+    <br />
+    <div>
+      <h3>Языки программирования</h3>
+      <ul>
+        <li><span>Python</span></li>
+        <li><span>Javascript/Typescript</span></li>
+        <li><span>HTML/CSS/SASS</span></li>
+        <li><span>Заинтересован в Go</span></li>
+      </ul>
+      <br/>
+      <h3>Фреймворки и библиотеки</h3>
+      <ul>
+        <li><span>Python: Django, Flask, Celery</span></li>
+        <li><span>Javascript: Angular, RxJS, React, Redux, Cypress</span></li>
+      </ul>
+      <br/>
+      <h3>DevOps</h3>
+      <div>
+        CI/CD, Jenkins, Docker, Ansible
+      </div>
+      <br/>
+      <h3>AWS</h3>
+      <div>Lambda, DynamoDB, API Gateway, Kinesis, S3, CloudFormation, Serverless, Amplify</div>
+      <br/>
+      <h3>Был опыт работы</h3>
+      <ul>
+        <li><span>Python: Pyramid, Twisted, SQLAlchemy</span></li>
+        <li><span>Javascript: Backbone/Marionette, Dygraphs, Flot, Node.js, Express, Koa, Websockets</span></li>
+        <li><span>CSS: Susy, Bootstrap framework, Foundation, UIKit</span></li>
+        <li><span>DB: PostgreSQL, MySQL, MongoDB, RabbitMQ, Celery MQ, Redis</span></li>
+      </ul>
+      <br/>
+      <h3>Среды разработки</h3>
+      <div>Emacs, Vim, Intellij Idea (PyCharm)</div>
+      <br/>
+      <h3>English: Upper Intermediate</h3>
+    </div>
+
+  </section>
+
+  <section class="cv-center">
+    <div>
+      <h1 class="">Максим Руренко</h1>
+      Более 10 лет разрабатываю пользовательские интерфейсы, серверную логику и развертываю итоговые приложения.
+      Могу руководить командами размером до пяти человек, выстраивать коммуникацию с заказчиком, разрабатывать архитектурные решения.
+      Имею опыт преподавания, менторства, оценки проектов и проведения собеседований.
+      В коде упор делаю на качество. Создаю понятные, расширяемые, быстрые и готовые к изменениям решения.
+    </div>
+    <br/>
+    <div>
+      <h2>Образование</h2>
+      <ul>
+        <li><span>ОмГУ. ИМИТ. Специалист. Математик, системный программист. 2007-2014 </span></li>
+        <li><span>ОмГУ. Факультет Психологии. Бакалавр. Психолог. 2018-2023</span></li>
+        <li><span>OTUS: Software Architect. 2023-2024</span></li>
+        <li><span>Стратоплан: Конструктивная конфронтация; Переговоры и конфликты; Постановка задач и контроль; Сплочение команды, внедрение изменений, оценка работы. 2020</span></li>
+      </ul>
+      <br/>
+
+      <h2>Опыт работы</h2>
+      {{<project-description
+            name="SAP: Merchant Onboarding"
+            timeframes="Январь 2023 - Август 2024 (1 год 8 месяцев)"
+            description="С целью улучшения процесса введения в работу магазина, компания представляет интерфейс, ориентированный на продавцов, для настройки коммерческих магазинов. Основной портал выступает в роли хоста, на котором множество независимых микрофронтендов предоставляют свой UI для конфигурации своей части фунцкионала. Решение направлено на разделение существующего приложения на микросервисы, предоставляя комплексное облачное решение, требующее сотрудничества между несколькими командами, участвующими в создании единого eCommerce-портала."
+            responsibilities="Frontend-разработка, DevOps"
+            achievements="Интеграция микрофронтенда: интеграция отдельно работающего веб-приложения в существующий eCommerce-портал с целью сделать его неотличимым от основной части приложения по внешнему виду и поведению.;Проектирование и реализация динамической (настроенной на сервере) системы виджетов.;Создание Angular библиотеки для интеграции микрофронтендов с целевой платформой.;Настройка CI/CD для приложения"
+            technologies="JavaScript: Angular + RxJS, NgRx, json-server, Luigi;CI/CD: Jenkins;SAP internal technologies and integrations (Piper, ...)"
+      >}}
+      <br/>
+      {{<project-description
+            name="SAP: Storefront hosting"
+            timeframes="Октябрь 2021 - Декабрь 2022 (1 год 3 месяца)"
+            description="Реализация серверлесс-решения развёртывания frontend приложений для покупателей. SaaS-коммерческий сервис"
+            responsibilities="Разработка серверлесс-бэкенда, тестирование. Поддержка cli инструмента для общения с бекендом. Поддержка предыдущей версии решения"
+            achievements="Разработал вспомогательный CLI-инструмент для деплоя приложения и анализа его состояния;Реализовал инструмент для анализа и устранения несоответствий данных в приложении;Внедрил pytest в проект и организовал тестовую среду для повторного использования тестовой логики между различными функциями Lambda;Извлёк дублирующуюся логику из кода функций Lambda в декораторы;Улучшил качество кода. Построил граф AWS зависимостей в коде с целью предстоящего рефакторинга;Проанализировал, протестировал и презентовал альтернативные архитектурные варианты мультиаккаунтного взаимодействия системы в AWS;Отрефакторил инструмент оптимизации ресурсов Лямбд, логика которых основана на логах их выполнения."
+            technologies="JavaScript: AWS Lambda для серверного рендеринга;Python: CLI + реализация AWS API с Serverless;AWS: Lambda, DynamoDB, CloudFront, CloudFormation, CodeBuild, S3;CI/CD: Jenkins"
+      >}}
+      <br/>
+      {{<project-description
+            name="Wyng: ProServ"
+            timeframes="2021 Июль - Октябрь (4 месяца)"
+            description="Создание и управление маркетинговыми кампаниями, демонстрация отчетов"
+            responsibilities="Frontend/Backend разработка"
+            achievements="Реализовал несколько кастомизаций кампаний для нужд клиентов;Внедрил функциональность Redux Toolkit Queries в проект"
+            technologies="JavaScript: React + Redux;Python: Flask, Django"
+      >}}
+      <br/>
+      {{<project-description
+            name="Vive Benefits: Data & Analytics"
+            timeframes="2021 Июнь - Июль (1 месяц)"
+            description="Анализ текущего технического решения с целью построения плана нового мультитенантоного решения и оценки его стоимости"
+            responsibilities="Погружение в доменную область, анализ кодовой базы, структуры данных и их взаимосвязей"
+            achievements="Подготовил схемы данных и их взаимосвязей. Проанализировал текущее решение, с точки зрения кода и его переиспользования;Участвовал в обсуждении мультитенантного архитектурного решения"
+            technologies="Python"
+      >}}
+      <br/>
+      {{<project-description
+            name="Winsight: Data Collection Tool"
+            timeframes="2021 Февраль - Май (4 месяца)"
+            description="POC. Сбор контактных данных для ресторанного бизнеса через API и парсинг данных"
+            responsibilities="Сбор требований, проработка решения, оценка, бэкенд разработка, тимлидство"
+            achievements="Проработка решения покрытия площади города окружностями, с целью обойти ограничения Yelp API"
+            technologies="Python"
+      >}}
+      <br/>
+      {{<project-description
+            name="Warner MG: OMS"
+            timeframes="2020 Июль - Декабрь (6 месяцев)"
+            description="Портал для управления информацией о медиа треках, альбомах, релизах"
+            responsibilities="Фронтенд разработка"
+            technologies="Javascript: Angular"
+      >}}
+      <br/>
+      {{<project-description
+            name="Lineate: Planner"
+            timeframes="2013 - 2019 (7 лет) с разной степенью вовлеченности от основной разработки до поддержки"
+            description="Внутренний проект мониторинга и управления персоналом для топ менеджмента, HRов, бухгалтерии и сотрудников. Основной функционал: поиск сотрудников по навыкам, орг. структура, индивидуальный план развития, проекты, оформление отпусков и командировок, отчеты"
+            responsibilities="Сбор и прояснение требований, управление разработкой, фуллстек разработка функционала"
+            achievements="Разработка и запуск первоначальной версии и ее последующее развитие, приложение активно используется по сей день. В него были интегрированы такие внутренние процессы как оформление отпусков и командировок, постановка и отслеживание целей индивидуального плана развития, отчеты по текущему состоянию людских ресурсов;Управлял командой для расширения функционала приложения, следил за качеством кода;Увеличил покрытие тестами основного функционала, осуществили переезд с Python 2 на Python 3"
+            technologies="Javascript: jQuery, Backbone/Marionette, Vue.js, vuex-orm;Python: Django, DRF (Django Rest Framework);DevOps: Docker, Ansible"
+      >}}
+      <br/>
+      {{<project-description
+            name="Wyng"
+            timeframes="Январь 2017 - Август 2019, Апрель - Май 2020 (2 года 10 месяцев); 2021 Июль - Сентябрь (3 месяца поддержка)"
+            description="Платформа управления маркетинговыми компаниями, которую используют такие глобальные бренды как Loreal, Disney, Collete, Unilever, Tapestry и более 250 других глобальных брендов"
+            responsibilities="Сбор требований, проработка решений, оценка, фуллстек разработка, тимлидство, разработка архитектурных решений"
+            achievements="Реализовал систему вебхук интеграции ответов пользователей со сторонними сервисами (Salesforce, Mailchimp, Oracle, ...) и визард создания этих интеграций;Разработал с нуля систему на основе AWS технологий для сбора медиа контента из Instagram, Twitter, Facebook;Получил первый опыт Лидства команды;Улучшил сбор и отображение метрик созданных рекламных компаний;Проработал архитектурное решение сегментирования данных пользователей на основе их ответов"
+            technologies="Javascript: React + Redux;Python: Flask, Django, Celery; DevOps: Docker (dev);AWS: Lambda, DynamoDB, APIGateway, Kinesis, Serverless;DB: MySQL, MongoDB"
+      >}}
+      <br/>
+      {{<project-description
+            name="Marketron: Marketplace"
+            timeframes="Декабрь 2015 - Декабрь 2016 (1 год)"
+            description="Веб приложение для продажи и покупки рекламного времени на радио станциях"
+            responsibilities="Frontend разработка"
+            achievements="Разработал фронтэнд для отчетов проигранных рекламных спотов;Реализовал фильтры для поиска"
+            technologies="Javascript: Backbone, Sass"
+      >}}
+      <br/>
+      {{<project-description
+            name="Penton Media: SourceESB Redesign"
+            timeframes="2015 Апрель - Ноябрь (8 месяцев)"
+            description="Онлайн каталог быстрого и точного поиска по миллионам электронных компонент и тысячам производителей"
+            responsibilities="Редизайн, frontend/backend разработка нового функционала"
+            technologies="Javascript: Node.js, Express, Backbone, Rivets, Bluebird, Requirejs;CSS: Sass, Susy"
+      >}}
+      <br/>
+      {{<project-description
+            name="Gravity4: DSP"
+            timeframes="2015 Февраль - Апрель (3 месяца)"
+            description="Поддержка, сопровождение, улучшение существующей кодовой базы и разработка нового DSP функционала"
+            responsibilities="Backend разработка"
+            achievements="Реализовал отправку аудит функционала для Facebook Exchange креативов;Улучшил покрытие тестами, сделал рефакторинг Django моделей в связи с изменением в API"
+            technologies="Python: Django, Twisted;DB: Redis, PostgreSQL, RabbitMQ, Celery MQ"
+      >}}
+      <br/>
+      {{<project-description
+            name="Jacaranda: Lotfindr"
+            timeframes="2015 Январь , 2016 Июль-Август , 2019 Июль (4 месяца)"
+            description="Веб парсер набора сайтов для аукционов"
+            responsibilities="Backend разработка, фикс багов"
+            technologies="Python: Django"
+      >}}
+      <br/>
+      {{<project-description
+            name="Boston Globe"
+            timeframes="Август 2014 - Январь 2015 (5 месяцев)"
+            description="Поддержка нескольких проектов в BostonGlobe"
+            responsibilities="Фикс багов, разработка нового функционала, общение с заказчиком"
+            achievements="Работал с java кодом, SQL скриптами, jsp страницами, js и backbone кодом"
+            technologies="Java: MyBatis, Jersey, Guice, Jsp;DB: PostgreSQL, MySQL;Javascript: jQuery, Backbone, AJAX;CSS: Compass, SASS), HTML;Methode(CMS)"
+      >}}
+      <br/>
+      <h2>Пет проекты</h2>
+      {{<project-description
+            name="Personal site"
+            timeframes="C марта 2022 по сей день"
+            description="Статический сайт на Netlify и Hugo для своих нужд"
+            responsibilities="Fullstack разработка"
+            achievements="Применил Hugo для создание собственного сайта;Начал реализовывать кастомную тему;Познакомился с Netlify;Сверстал свое резюме"
+            technologies="Hugo;Netlify;CSS: Tainwind;Javascript: Alpine.js"
+      >}}
+      <br/>
+      {{<project-description
+            name="Psyporog"
+            timeframes="Апрель 2020"
+            description="Приложение для измерения физиологической остроты слуха"
+            responsibilities="Frontend разработка"
+            achievements="Реализовал приложение, позволяющее порог остроты слуха"
+            technologies="Javascript: React.js, Tone;CSS: Rebass, Emotion"
+      >}}
+      <br/>
+      {{<project-description
+            name="Sunday school dashboard"
+            timeframes="Сентябрь 2019 - Февраль 2020 (6 месяцев)"
+            description="Дашборд для оценивания студентов школы разработчиков"
+            responsibilities="Fullstack разработка"
+            achievements="Реализовал serverless проект с нулевой стоимостью окружения"
+            technologies="Javascript: React; AWS: Amplify, Identity and Access Management"
+      >}}
+      <br/>
+      {{<project-description
+            name="HarryPotter exchanger"
+            timeframes="Ноябрь 2018"
+            description="Приложение для обмена коллекционными фигурками"
+            responsibilities="Fullstack разработка"
+            achievements="Разработал приложение на новой для себя технологии;Собрал полную коллекцию фигурок"
+            technologies="Javascript: Vue.js; DB: PostgreSQL (Heroku)"
+      >}}
+    </div>
+  </section>
+
+  <section class="cv-right">
+    <div class="cv-tech-list-icons">
+      <img alt="" src="/icons/emacs.svg">
+      <img alt="" src="/icons/vim.svg">
+      <img alt="" src="/icons/python.svg">
+      <img alt="" src="/icons/django.svg">
+      <img alt="" src="/icons/flask.svg">
+      <img alt="" src="/icons/js.svg">
+      <img alt="" src="/icons/ts.svg">
+      <img alt="" src="/icons/nodejs.svg">
+      <img alt="" src="/icons/angular.svg">
+      <img alt="" src="/icons/react.svg">
+      <img alt="" src="/icons/redux.svg">
+      <img alt="" src="/icons/cypress.svg">
+      <img alt="" src="/icons/css3.svg">
+      <img alt="" src="/icons/sass.svg">
+      <img alt="" src="/icons/jenkins.svg">
+      <img alt="" src="/icons/docker.svg">
+      <img alt="" src="/icons/ansible.svg">
+      <img alt="" src="/icons/aws.svg">
+      <img alt="" src="/icons/golang.svg">
+      <img alt="" src="/icons/archlinux.svg">
+      <img alt="" src="/icons/hyperland.svg">
+      <img alt="" src="/icons/tg.svg">
+      <img alt="" src="/icons/terminal.svg">
+      <img alt="" src="/icons/music.svg">
+      <img alt="" src="/icons/psi.svg">
+      <img alt="" src="/icons/chess.svg">
+      <img alt="" src="/icons/book.svg">
+      <img alt="" src="/icons/laptop.svg">
+      <img alt="" src="/icons/square-root.svg">
+      <div></div>
+    </div>
+  </section>
+
+</div>

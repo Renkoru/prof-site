@@ -1,25 +1,44 @@
-{{$itItems := split (.Get "skills") ","}}
+{{$achievements := split (.Get "achievements") ";"}}
+{{$technologies := split (.Get "technologies") ";"}}
 
 <div>
-  <span>{{ .Get "name" }}</span>
+  <h3>{{ .Get "name" }}</h3>
+  <div>
+    {{ .Get "timeframes" }}
+  </div>
+  <p class="cv-experience-block">
+    <b class="cv-experience-title">{{ T "project description" | title }}:</b>{{ .Get "description" }}
+  </p>
+  <p class="cv-experience-block">
+    <b class="cv-experience-title">{{ T "responsibilities" | title }}:</b>{{ .Get "responsibilities" }}
+  </p>
+
+{{ if (.Get "achievements") }}
+  <p class="cv-experience-block">
+    <b class="cv-experience-title">{{ T "personal achievements" | title }}:</b>
+  </p>
+
   <ul>
+    {{ range $achievements }}
     <li>
-      <b>Timeframes:</b> {{ .Get "timeframes" }}
+      <span>
+        {{ . }}
+      </span>
     </li>
+    {{ end }}
+  </ul>
+{{ end }}
+
+  <p class="cv-experience-block">
+    <b class="cv-experience-title">{{ T "technologies" | title }}:</b>
+  </p>
+  <ul>
+    {{ range $technologies }}
     <li>
-      <b>Skills:</b> {{ delimit $itItems ", " }}
+      <span>
+        {{ . }}
+      </span>
     </li>
-    <li>
-      <b>Description:</b> {{ .Get "description" }}
-    </li>
-    <li>
-      <b>Responsibilities:</b> {{ .Get "responsibilities" }}
-    </li>
-    <li>
-      <b>Personal achievements:</b> {{ .Get "achivements" }}
-    </li>
-    <li>
-      <b>Technologies:</b> {{ .Get "technologies" }}
-    </li>
+    {{ end }}
   </ul>
 </div>

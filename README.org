@@ -26,3 +26,6 @@ Run local dev server.
 * Important
 ** Customized partials of Hugo coder theme:
 - layouts/_default/baseof.html - added 'customPrintCSS' handler
+* Usefull Hugo-OrgMode links:
+- https://soumendraganguly.com/blog/org_mode_micro/
+- https://niklasfasching.github.io/go-org/
