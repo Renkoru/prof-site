@@ -77,7 +77,7 @@ defaultContentLanguageInSubdir = false
         weight = 3
   [languages.en]
     contentDir = 'content/en'
-    disabled = true
+    disabled = false
     languageCode = 'en-US'
     languageDirection = 'ltr'
     languageName = 'English'

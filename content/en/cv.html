@@ -1,0 +1,242 @@
+---
+draft: false
+---
+
+
+<div class="cv-page">
+  <section class="cv-left">
+    <div>
+      <img class="cv-avatar" alt="" src="/{{<avatar>}}">
+    </div>
+    <br />
+    <div class="cv-icons">
+      <ul>
+        <li>
+          <a target="_blank" href="mailto:mrurenko@gmail.com"><img alt="" src="/icons/email.svg">mrurenko@gmail.com</a>
+        </li>
+
+        <li>
+          <a target="_blank" href="https://www.linkedin.com/in/maxim-rurenko-033a13a1/">
+            <img alt="" src="/icons/linkedin.svg"> maxim-rurenko-033a13a1
+          </a>
+        </li>
+
+        <li>
+          <a target="_blank" href="http://t.me/Renkoru"><img alt="" src="/icons/tg.svg">@Renkoru</a>
+        </li>
+      </ul>
+    </div>
+    <br />
+    <div>
+      <h3>Programming Languages</h3>
+      <ul>
+        <li><span>Javascript/Typescript</span></li>
+        <li><span>Python</span></li>
+        <li><span>Interested in Go</span></li>
+      </ul>
+      <br/>
+      <h3>Frameworks and Libraries</h3>
+      <ul>
+        <li><span>Javascript: React, Redux, Tanstack Query/Router, Cypress, Angular, RxJS</span></li>
+        <li><span>Python: Django, Flask</span></li>
+      </ul>
+      <br/>
+      <h3>DevOps</h3>
+      <div>
+        CI/CD, Jenkins, Gitlab, Docker, Ansible
+      </div>
+      <br/>
+      <h3>AWS</h3>
+      <div>Lambda, DynamoDB, API Gateway, Kinesis, S3, CloudFormation, Serverless, Amplify</div>
+      <br/>
+      <h3>Past Experience With</h3>
+      <ul>
+        <li><span>Python: Pyramid, Twisted, SQLAlchemy, Celery</span></li>
+        <li><span>Javascript: Backbone/Marionette, Dygraphs, Flot, Node.js, Express, Koa</span></li>
+        <li><span>CSS: Susy, MUI, Bootstrap framework, Foundation, UIKit</span></li>
+        <li><span>DB: PostgreSQL, MySQL, MongoDB, RabbitMQ, Celery MQ, Redis</span></li>
+      </ul>
+      <br/>
+      <h3>English: Upper Intermediate</h3>
+    </div>
+  </section>
+
+  <section class="cv-center">
+    <div>
+      <h1>Maxim Rurenko</h1>
+      Developing user interfaces, server logic, and deploying applications for over 10 years. Capable of leading teams of up to 5 members, establishing client communication, and designing architectural solutions. Have experience in teaching, mentoring, project evaluation, and conducting interviews. Focus on code quality. Create clear, scalable, fast, and adaptable solutions. Prioritizing remote fullstack development with React-Python.
+    </div>
+    <br/>
+    <div>
+      <h2>Education</h2>
+      <ul>
+        <li><span>Omsk State University. Institute of Mathematics and IT. Specialist. Mathematician, System Programmer. 2007-2014</span></li>
+        <li><span>Omsk State University. Faculty of Psychology. Bachelor. Psychologist. 2018-2023</span></li>
+        <li><span>OTUS (online education platform): Software Architect. 2023-2024</span></li>
+        <li><span>Stratoplan: Constructive Confrontation; Negotiations and Conflicts; Task Setting and Control; Team Building, Change Implementation, Performance Evaluation. 2020</span></li>
+      </ul>
+      <br/>
+
+      <h2>Work Experience</h2>
+      {{<project-description
+            name="Blaxe: Smart Home Automation System"
+            timeframes="December 2024 - till now (5 months)"
+            description="Managment and configuration smart home controllers"
+            responsibilities="Fullstack development, DevOps"
+            achievements="Implemented UI from scratch for creating controllers configurations; Setup basic CI/CD with Jenkins, monitoring with Prometheus and Grafana, Graylog for centralized logs; Implemented Auth service in Golang; Implemented backend service to sync script files for wood sawing machines; Configured self-hosted environments with Ansible"
+            technologies="JavaScript: React, Tanstack Query, Tanstack Router, Zustand, React Flow, Vite; CI/CD: Jenkins, Ansible, Gitlab; Golang; Monitoring: Prometheus, Grafana, Graylog"
+      >}}
+      <br/>
+      {{<project-description
+            name="SAP: Merchant Onboarding"
+            timeframes="January 2023 - August 2024 (1 year 8 months)"
+            description="To improve the store onboarding process, the company introduced a seller-focused interface for configuring commercial stores. The main portal hosts multiple independent micro-frontends that provide UI for configuring their respective functionalities. The solution splits the existing application into microservices while delivering a comprehensive cloud-based solution requiring collaboration between multiple teams building a unified eCommerce portal."
+            responsibilities="Frontend development, DevOps"
+            achievements="Micro-frontend integration: Integrated standalone web application into existing eCommerce portal to match appearance/behavior; Designed/implemented dynamic (server-configured) widget system; Created Angular library for micro-frontend integration; Configured CI/CD"
+            technologies="JavaScript: Angular + RxJS, NgRx, json-server, Luigi; CI/CD: Jenkins; SAP internal tools (Piper)"
+      >}}
+      <br/>
+      {{<project-description
+            name="SAP: Storefront Hosting"
+            timeframes="October 2021 - December 2022 (1 year 3 months)"
+            description="Implementation of serverless solution for deploying customer-facing frontend applications. Commercial SaaS service."
+            responsibilities="Serverless backend development, testing. Maintenance of CLI tool for backend communication. Legacy solution support."
+            achievements="Developed a CLI tool for application deployment and state analysis; Created a tool for identifying and resolving data inconsistencies; Integrated pytest and established a reusable testing environment for Lambda functions; Extracted duplicate logic from Lambda code into decorators; Improved code quality by mapping AWS dependencies for future refactoring; Researched and presented alternative multi-account architectural approaches in AWS; Refactored Lambda resource optimization tool based on execution logs."
+            technologies="JavaScript: AWS Lambda SSR; Python: CLI + Serverless; AWS: Lambda, DynamoDB, CloudFront, CloudFormation; CI/CD: Jenkins"
+      >}}
+      <br/>
+      {{<project-description
+            name="Wyng: ProServ"
+            timeframes="July 2021 - October 2021 (4 months)"
+            description="Marketing campaign management and reporting platform"
+            responsibilities="Fullstack development"
+            achievements="Implemented campaign customizations for clients; Integrated Redux Toolkit Query"
+            technologies="JavaScript: React + Redux; Python: Flask, Django"
+      >}}
+      <br/>
+      {{<project-description
+            name="Vive Benefits: Data & Analytics"
+            timeframes="June 2021 - July 2021 (1 month)"
+            description="Analysis of existing solution for multi-tenant architecture planning and cost estimation"
+            responsibilities="Domain research, codebase/data structure analysis"
+            achievements="Created data relationship diagrams; Analyzed code reusability; Participated in architectural discussions"
+            technologies="Python"
+      >}}
+      <br/>
+      {{<project-description
+            name="Winsight: Data Collection Tool"
+            timeframes="February 2021 - May 2021 (4 months)"
+            description="POC for restaurant contact data collection via API and parsing"
+            responsibilities="Requirement gathering, solution design, backend development, team lead"
+            achievements="Developed city area coverage solution to bypass Yelp API limitations"
+            technologies="Python"
+      >}}
+      <br/>
+      {{<project-description
+            name="Warner MG: OMS"
+            timeframes="July 2020 - December 2020 (6 months)"
+            description="Media track/album/release management portal"
+            responsibilities="Frontend development"
+            technologies="JavaScript: Angular"
+      >}}
+      <br/>
+      {{<project-description
+            name="Lineate: Planner"
+            timeframes="2013 - 2019 (7 years with varying involvement)"
+            description="Internal HR management system for executives/HR/accounting. Features: employee skill search, org structure, development plans, leave management, reports"
+            responsibilities="Requirement analysis, development management, fullstack implementation"
+            achievements="Launched/maintained core system integrating leave management, development tracking, resource reports; Led feature expansion team; Increased test coverage; Migrated from Python 2 to 3"
+            technologies="JavaScript: jQuery/Backbone/Vue; Python: Django/DRF; DevOps: Docker/Ansible"
+      >}}
+      <br/>
+      {{<project-description
+            name="Wyng"
+            timeframes="January 2017 - August 2019, April-May 2020 (2 years 10 months + 3 months support)"
+            description="Marketing platform used by L'Oréal, Disney, Unilever, 250+ brands"
+            responsibilities="Fullstack development, architecture design, team leadership"
+            achievements="Built webhook integration system with Salesforce/Mailchimp/Oracle; Created AWS-based social media content collector; Improved campaign metrics system; Designed user segmentation architecture"
+            technologies="JavaScript: React/Redux; Python: Flask/Django/Celery; AWS: Lambda/DynamoDB/Kinesis; DB: MySQL/MongoDB"
+      >}}
+      <br/>
+      {{<project-description
+            name="Marketron: Marketplace"
+            timeframes="December 2015 - December 2016 (1 year)"
+            description="Radio ad time trading web app"
+            responsibilities="Frontend development"
+            achievements="Developed ad spot reports interface; Implemented search filters"
+            technologies="JavaScript: Backbone; Sass"
+      >}}
+      <br/>
+      {{<project-description
+            name="Penton Media: SourceESB Redesign"
+            timeframes="April 2015 - November 2015 (8 months)"
+            description="Electronics components catalog with millions of parts"
+            responsibilities="Redesign, feature development"
+            technologies="JavaScript: Node/Express/Backbone; CSS: Sass/Susy"
+      >}}
+      <br/>
+      {{<project-description
+            name="Gravity4: DSP"
+            timeframes="February 2015 - April 2015 (3 months)"
+            description="Ad tech platform maintenance and feature development"
+            responsibilities="Backend development"
+            achievements="Implemented Facebook Exchange creative auditing; Improved test coverage; Refactored Django models"
+            technologies="Python: Django/Twisted; DB: Redis/PostgreSQL/RabbitMQ"
+       >}}
+       <br/>
+       {{<project-description
+            name="Jacaranda: Lotfindr"
+            timeframes="January 2015, July-August 2016, July 2019 (4 months total)"
+            description="Auction site web scraper"
+            responsibilities="Backend development, bug fixes"
+            technologies="Python: Django"
+        >}}
+        <br/>
+        {{<project-description
+            name="Boston Globe"
+            timeframes="August 2014 - January 2015 (5 months)"
+            description="Support for BostonGlobe projects"
+            responsibilities="Bug fixes, feature development, client communication"
+            achievements="Worked with Java/SQL/JSP/Backbone code"
+            technologies="Java: MyBatis/Jersey; DB: PostgreSQL/MySQL; Frontend: jQuery/Backbone"
+        >}}
+
+        <h2>Pet Projects</h2>
+        {{<project-description
+            name="Personal Site"
+            timeframes="March 2022 - Present"
+            description="Static site using Hugo/Netlify"
+            responsibilities="Fullstack development"
+            achievements="Implemented Hugo CMS; Developed custom theme; Learned Netlify; Designed CV layout"
+            technologies="Hugo, Netlify, Tailwind CSS, Alpine.js"
+        >}}
+        <br/>
+        {{<project-description
+            name="Psyporog"
+            timeframes="April 2020"
+            description="Hearing acuity measurement app"
+            responsibilities="Frontend development"
+            achievements="Implemented auditory threshold detection"
+            technologies="React.js, Tone.js, Rebass"
+        >}}
+        <br/>
+        {{<project-description
+            name="Sunday School Dashboard"
+            timeframes="September 2019 - February 2020 (6 months)"
+            description="Developer school student evaluation dashboard"
+            responsibilities="Fullstack development"
+            achievements="Built zero-cost serverless solution"
+            technologies="React, AWS Amplify"
+        >}}
+        <br/>
+        {{<project-description
+            name="HarryPotter Exchanger"
+            timeframes="November 2018"
+            description="Collectible figurine trading app"
+            responsibilities="Fullstack development"
+            achievements="Learned new tech stack; Completed personal collection"
+            technologies="Vue.js, PostgreSQL (Heroku)"
+        >}}
+    </div>
+  </section>
+</div>
